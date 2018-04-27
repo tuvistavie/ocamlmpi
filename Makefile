@@ -2,10 +2,10 @@ OCAMLC=ocamlc
 OCAMLOPT=ocamlopt
 OCAMLDEP=ocamldep
 
-MPIINCDIR=/usr/include/mpich2
-MPILIBDIR=/usr/lib
-MPICC=mpicc
-MPIRUN=mpirun
+MPIINCDIR ?= /usr/include/mpich2
+MPILIBDIR ?= /usr/lib
+MPICC ?= mpicc
+MPIRUN ?= mpirun
 
 CFLAGS=-I`$(OCAMLC) -where` -I$(MPIINCDIR) -O2 -g -Wall
 
